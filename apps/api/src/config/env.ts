@@ -17,9 +17,9 @@ const checkEnv = (): EnvVariables => {
     DB_PASSWORD: process.env.DB_PASSWORD as unknown as string,
     DB_PORT: process.env.DB_PORT as unknown as string,
   };
-  for (const envkey of Object.keys(ENV)) {
-    throwIfUndefined(envkey);
-  }
+  // for (const envkey of Object.keys(ENV)) {
+  //   throwIfUndefined(envkey);
+  // }
   return ENV;
 };
 
