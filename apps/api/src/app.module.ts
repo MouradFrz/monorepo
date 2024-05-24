@@ -11,7 +11,7 @@ import { User } from './user/user.model';
   imports: [
     ConfigModule.forRoot(),
     SequelizeModule.forRoot({
-      dialect: 'mariadb',
+      dialect: 'mssql',
       host: ENV.DB_HOST,
       port: Number(ENV.DB_PORT),
       username: ENV.DB_USERNAME,
