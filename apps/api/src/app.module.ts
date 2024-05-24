@@ -3,15 +3,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
-import { User } from './models/user.model';
 import { ENV } from './config/env';
-import { UsersService } from './services/user.service';
+import { UserModule } from './user/user.module';
+import { User } from './user/user.model';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     SequelizeModule.forRoot({
-      dialect: 'mysql',
+      dialect: 'mariadb',
       host: ENV.DB_HOST,
       port: Number(ENV.DB_PORT),
       username: ENV.DB_USERNAME,
@@ -19,8 +19,9 @@ import { UsersService } from './services/user.service';
       database: ENV.DB_NAME,
       models: [User],
     }),
+    UserModule,
   ],
   controllers: [AppController],
-  providers: [AppService, UsersService],
+  providers: [AppService],
 })
 export class AppModule {}
