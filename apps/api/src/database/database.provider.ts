@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
-import { ENV } from 'src/config/env';
-import { User } from 'src/user/user.model';
+import { ENV } from '../config/env';
+import { User } from '../user/user.model';
 
 /**
  * SEQUELIZE variable is stored in a file named
