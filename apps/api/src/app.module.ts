@@ -1,26 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
-import { ENV } from './config/env';
 import { UserModule } from './user/user.module';
-import { User } from './user/user.model';
 
+import { DatabaseModule } from './database/database.module';
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-    SequelizeModule.forRoot({
-      dialect: 'mssql',
-      host: ENV.DB_HOST,
-      port: Number(ENV.DB_PORT),
-      username: ENV.DB_USERNAME,
-      password: ENV.DB_PASSWORD,
-      database: ENV.DB_NAME,
-      models: [User],
-    }),
-    UserModule,
-  ],
+  imports: [ConfigModule.forRoot(), UserModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })

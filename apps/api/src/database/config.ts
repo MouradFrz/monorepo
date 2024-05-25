@@ -1,5 +1,5 @@
 module.exports = {
-  all: {
+  development: {
     dialect: 'mssql',
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
