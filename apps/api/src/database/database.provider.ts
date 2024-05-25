@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import { ENV } from '../config/env';
 import { User } from '../user/user.model';
-
+import tedious from 'tedious';
 /**
  * SEQUELIZE variable is stored in a file named
  * 'constants' so it can be easily reused anywhere
@@ -19,6 +19,7 @@ export const databaseProviders = [
         username: ENV.DB_USERNAME,
         password: ENV.DB_PASSWORD,
         database: ENV.DB_NAME,
+        dialectModule: tedious,
         define: {
           freezeTableName: true,
           createdAt: false,
