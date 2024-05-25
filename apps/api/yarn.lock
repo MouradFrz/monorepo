@@ -5194,7 +5194,7 @@ tapable@^2.1.1, tapable@^2.2.0, tapable@^2.2.1:
   resolved "https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
-tedious@^18.1.0:
+tedious@^18.1.0, tedious@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/tedious/-/tedious-18.2.0.tgz#5f6e24b6c6e2d997e2e6a7b883bade1f979cb3a2"
   integrity sha512-PCELoE17gN71lk0A87+WITcIJ6uGagrV2hXVJT5ige/Yef+YCLVpQ/Je12rOZT7vBhVZoMp6MvaBmbfI8fw0ag==
