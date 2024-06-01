@@ -27,15 +27,7 @@ export const databaseProviders = [
         },
       });
 
-      /**
-       * Add Models Here
-       * ===============
-       * You can add the models to
-       * Sequelize later on.
-       */
       sequelize.addModels([User]);
-
-      // await sequelize.sync();
       return sequelize;
     },
   },

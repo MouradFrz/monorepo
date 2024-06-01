@@ -1,17 +1,31 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
+import { User } from './user/user.model';
+import { UserService } from './user/user.service';
+import { IsDefined, IsOptional } from 'class-validator';
+class CreateUserDto {
+  @IsDefined()
+  firstName: string;
+  @IsDefined()
+  lastName: string;
+  @IsOptional()
+  isActive: boolean;
+}
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    private readonly userService: UserService,
+  ) {}
 
   @Get()
-  getHello(): string {
-    return 'hi';
+  async getHello(@Query() query: { name: string }): Promise<User[]> {
+    return await this.userService.getAllUsers(query);
   }
 
   @Post()
-  postFunction(): void {
-    return;
+  async create(@Body() body: CreateUserDto): Promise<User> {
+    return await this.userService.createUser(body);
   }
 }
