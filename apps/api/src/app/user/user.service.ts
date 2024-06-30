@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { User } from './user.model';
+import { User } from 'src/infra/models/user.model';
 export type UserCreateAttributes = {
   firstName: string;
   lastName: string;
@@ -17,9 +17,7 @@ export class UserService {
     });
     return user;
   }
-  public async createUser(
-    newUserAttributes: UserCreateAttributes,
-  ): Promise<User> {
+  public async createUser(newUserAttributes: UserCreateAttributes): Promise<User> {
     return await User.create(newUserAttributes);
   }
 }
