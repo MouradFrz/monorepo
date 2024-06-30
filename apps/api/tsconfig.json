@@ -16,6 +16,19 @@
     "noImplicitAny": true,
     "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      // "@root/*": ["./src/*"],
+      // "@models/*": ["./src/infra/sequelize/model/*"],
+      // "@infra/*": ["./src/infra/*"],
+      // "@repositories/*": ["./src/infra/sequelize/repository/*"],
+      // "@repositories": ["./src/infra/sequelize/repository/index"],
+      "@interface/*": ["./src/interface/*"]
+      // "@app/*": ["./src/app/*"],
+      // "@dto/*": ["./src/dto/*"],
+      // "@types/*": ["./src/types/*"],
+      // "@common/*": ["./src/common/*"],
+      // "@utils/*": ["./src/utils/*"]
+    }
   }
 }
