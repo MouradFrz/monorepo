@@ -1,7 +1,9 @@
 import { Sequelize } from 'sequelize-typescript';
 import { ENV } from '../config/env';
-import { User } from '../user/user.model';
 import tedious from 'tedious';
+
+import { User } from 'src/infra/models/user.model';
+import { Product } from 'src/infra/models/product.model';
 /**
  * SEQUELIZE variable is stored in a file named
  * 'constants' so it can be easily reused anywhere
@@ -27,7 +29,7 @@ export const databaseProviders = [
         },
       });
 
-      sequelize.addModels([User]);
+      sequelize.addModels([User, Product]);
       return sequelize;
     },
   },

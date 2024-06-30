@@ -11,8 +11,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
+    "@types/google-libphonenumber": "^7.4.30",
+    "google-libphonenumber": "^3.2.34",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.5",
