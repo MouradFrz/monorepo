@@ -15,6 +15,7 @@ export const databaseProviders = [
     provide: 'SEQUELIZE',
     useFactory: async () => {
       const sequelize = new Sequelize({
+        logging: false,
         dialect: 'mssql',
         host: ENV.DB_HOST,
         port: Number(ENV.DB_PORT),

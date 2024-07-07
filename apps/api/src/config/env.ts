@@ -16,6 +16,7 @@ const checkEnv = (): EnvVariables => {
     DB_USERNAME: process.env.DB_USERNAME as unknown as string,
     DB_PASSWORD: process.env.DB_PASSWORD as unknown as string,
     DB_PORT: process.env.DB_PORT as unknown as string,
+    JWT_SECRET: process.env.JWT_SECRET as unknown as string,
   };
 
   for (const envkey of Object.keys(ENV)) {

@@ -4,6 +4,7 @@ export type EnvVariables = {
   DB_USERNAME: string;
   DB_PASSWORD: string;
   DB_PORT: string;
+  JWT_SECRET: string;
 };
 
 export enum EnvErrorsNames {

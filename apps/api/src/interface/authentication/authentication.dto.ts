@@ -8,3 +8,10 @@ export class CreateUserDto {
   @IsOptional()
   isActive: boolean;
 }
+
+export class CredentialsDto {
+  @IsDefined()
+  email: string;
+  @IsDefined()
+  password: string;
+}
