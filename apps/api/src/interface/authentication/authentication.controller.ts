@@ -9,7 +9,7 @@ export class AuthenticationController {
 
   @Get('')
   public getAllusers() {
-    return this.authService.getAllUsers({ attributes: ['firstName'], include: [{ model: Product }] });
+    return this.authService.getAllUsers({});
   }
 
   @Post('')

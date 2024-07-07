@@ -9,6 +9,18 @@ export class User extends Model {
   @Column
   lastName: string;
 
+  @Column
+  email: string;
+
+  @Column
+  password: string;
+
+  @Column
+  flags: string;
+
+  @Column
+  role: string;
+
   @Column({ defaultValue: true })
   isActive: boolean;
   @HasMany(() => Product)
