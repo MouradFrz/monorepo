@@ -17,6 +17,10 @@ export class UserService {
     });
     return user;
   }
+  public async getUserById(id: number): Promise<User | null> {
+    const user = await User.findByPk(id);
+    return user;
+  }
   public async createUser(newUserAttributes: UserCreateAttributes): Promise<User> {
     return await User.create(newUserAttributes);
   }
